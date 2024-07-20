@@ -1,0 +1,37 @@
+.header{
+
+  background-image:linear-gradient(to top, #fff 0%, rgb(255, 255, 255, .8) 13%, transparent 20%), url(../img/hero.jpg);
+  background-size: cover;
+  height: 100vh;
+  max-width: 100%;
+
+  @media only screen and (max-width:  $bp-medium2){
+    height: auto;
+    padding-bottom: 10rem;
+    background-image:linear-gradient(to top, #fff 0%, rgb(255, 255, 255, .8) 13%, rgb(255, 255, 255, .3)), url(../img/hero.jpg);
+  }
+
+  &__box{
+    padding-top: 13%;
+
+    @media only screen and (max-width: $bp-largest){
+      padding-top: 20%;
+    }
+
+    @media only screen and (max-width:  $bp-medium2){
+      padding-top: 13%;
+    }
+  }
+
+  p{
+    margin-bottom: 3rem;
+
+    @media only screen and (max-width:  $bp-medium3){
+      width: 80%;
+    }
+
+    @media only screen and (max-width: $bp-small){
+      width: 100%;
+    }
+  }
+}

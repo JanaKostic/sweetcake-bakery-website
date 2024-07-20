@@ -1,0 +1,47 @@
+.center{
+  text-align: center;
+  margin: 0 auto;
+}
+
+.mg--b--sm{
+  margin-bottom: 1.5rem;
+}
+
+.mg--t--sm{
+  margin-top: 1.5rem;
+}
+
+.heading--1{
+  font-family: $font-display;
+  font-size: 6rem;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.heading--2{
+  display: inline-block;
+  font-family: $font-display;
+  font-size: 5rem;
+  background-image: linear-gradient(to right, $color-primary-dark, $color-primary-light);
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+
+  @media only screen and (max-width: $bp-medium2){
+    font-size: 4.5rem;
+  }
+}
+
+.heading--4{
+  font-family: $font-display;
+  color: $color-primary-dark;
+  font-weight: 700;
+
+  @media only screen and (max-width: $bp-medium2){
+    font-size: 2.5rem;
+  }
+
+  @media only screen and (max-width: $bp-small){
+    margin-top: 1rem;
+  }
+}

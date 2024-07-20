@@ -1,0 +1,146 @@
+// COLOR VARIABLES
+$color-primary: #f03e3e;
+$color-primary-dark: #c92a2a;
+$color-primary-light: #ff6b6b;
+$color-primary-lightest: #ffc9c9;
+
+$color-grey: #495057;
+$color-grey-light: #adb5bd;
+$color-grey-dark: #212529;
+
+// FONT VARIABLES
+$font-primary: 'Poppins', sans-serif;
+$font-display: 'Quicksand', sans-serif;
+
+//SCREEN SIZES 
+$bp-giant: 110.3em;
+$bp-largest: 101.2em;
+$bp-large: 90.25em;
+$bp-medium: 79.62em;
+$bp-medium2: 72.87em;
+$bp-medium3: 53.12em;
+$bp-small: 40.81em;
+$bp-smallest: 32.37em;
+
+*, *::before, *:after{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html{
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-largest){
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: $bp-medium2){
+    font-size: 42%;
+  }
+
+  @media only screen and (max-width: $bp-smallest){
+    font-size: 38%;
+  }
+}
+
+body{
+  font-family: $font-primary;
+  color: $color-grey-dark;
+  font-weight: 300;
+  line-height: 1.5;
+  font-size: 2rem;
+
+  overflow-x: hidden;
+}
+
+.container{
+  padding: 0 20rem;
+
+  @media only screen and (max-width: 59.37em){
+    padding: 0 15rem;
+  }
+}
+
+.grid--col--2{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media only screen and (max-width:  81.25em){
+    grid-template-columns: 65% 35%;
+  }
+
+  @media only screen and (max-width: 53.12em){
+    display: block;
+  }
+
+  
+}
+
+.grid--col--3{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+
+  @media only screen and (max-width: 47.87em){
+    display:block
+  }
+}
+
+.grid--row--3{
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+  row-gap: 3rem;
+  justify-items: start;
+
+  @media only screen and (max-width: $bp-largest){
+    row-gap: 5rem;
+  }
+}
+
+.grid--row--4{
+  display: grid;
+  grid-template-rows: repeat(4, min-content);
+  row-gap: 2rem;
+  justify-items: start;
+}
+
+.grid--4{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  gap: 5rem;
+
+  @media only screen and (max-width: 51.06em){
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,1fr);
+    padding: 0 10rem;
+  }
+
+  @media only screen and (max-width: $bp-small){
+    padding: 0;
+  }
+}
+
+.grid--8{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 5rem;
+  justify-items: start;
+  margin: 0 20rem;
+
+  @media only screen and (max-width: $bp-medium){
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  @media only screen and (max-width: 59.37em){
+    margin: 0 10rem;
+  }
+
+  @media only screen and (max-width: $bp-small){
+    margin: 0 ;
+  }
+}
